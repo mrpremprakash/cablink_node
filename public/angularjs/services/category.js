@@ -12,7 +12,6 @@ myDemoApp.service('categoryService', function($http, $q) {
             });
     }
     this.saveCategory = function(data) {
-
         return $http({
             method  : 'POST',
             url     : '/category/add',
