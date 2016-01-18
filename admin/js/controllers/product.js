@@ -3,10 +3,13 @@ myDemoApp.controller('productListCtrl', function($scope, $http, productService) 
     productService.getProducts().then(function(data) {
         $scope.products = data;
     });
-    if($scope.search === undefined){
-        $scope.search = "Sherlock Holmes";
-        fetch();
-    }
+    var pendingTask;
+    $scope.change = function(){
+        if(pendingTask) {
+            clearTimeout(pendingTask);
+        }
+        pendingTask = setTimeout(productService.fetch($scope), 800);
+    };
 }).controller('productAddCtrl', function($scope, $http, categoryService, productService) {
     //$scope.categories = [];
     categoryService.getCategories().then(function(data) {

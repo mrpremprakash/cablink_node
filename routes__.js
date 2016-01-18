@@ -64,5 +64,8 @@ module.exports = (function() {
         //        res.send(JSON.stringify(model));
         //    });
     });
+    router.get('/admin/product/fetch', function(req, res) {
+        Product.fetch(req, res);
+    });
     return router;
 })();

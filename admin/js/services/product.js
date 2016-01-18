@@ -20,5 +20,16 @@ myDemoApp.service('productService', function($http, $q) {
             }, function (response) {
                 console.log(response);
             });
+    };
+    this.fetch = function($scope) {
+        $http
+            .get("admin/product/fetch?term=" + $scope.search)
+            .success(
+                function(response){
+                    deferred.resolve(response);
+                    $scope.products = response;
+                    return deferred.promise;
+                }
+            );
     }
 });

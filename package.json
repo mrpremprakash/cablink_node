@@ -7,6 +7,8 @@
     "bookshelf": "^0.9.1",
     "express": "^4.10.6",
     "knex": "^0.9.0",
-    "mysql": "^2.5.4"
+    "mysql": "^2.5.4",
+    "ejs": "^1.0.0",
+    "express-session": "^1.7.6"
   }
 }

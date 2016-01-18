@@ -1,8 +1,13 @@
 var myDemoApp = angular.module('myDemoApp', ['ui.router']);
 myDemoApp.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
-    var dashboard = {
+    var login = {
         title: 'Login',
         url: '/admin',
+        templateUrl: 'admin/index'
+    },
+    dashboard = {
+        title: 'Login',
+        url: '/admin/dashboard',
         templateUrl: 'admin/dashboard'
     },
     categories = {
@@ -35,6 +40,7 @@ myDemoApp.config(['$stateProvider', '$locationProvider', function ($stateProvide
         templateUrl: 'admin/dashboard'
     };
     $stateProvider
+        .state('login', login)
         .state('dashboard', dashboard)
         .state('categories', categories)
         .state('category_add', category_add)
