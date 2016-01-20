@@ -47,6 +47,7 @@
                                         <tr role="row">
                                             <th >Image</th>
                                             <th >Name</th>
+                                            <th >Description</th>
                                             <th >Price</th>
                                             <th >Status</th>
                                             <th >Action</th>
@@ -56,6 +57,7 @@
                                     <tr class="gradeA odd" role="row" ng-repeat="item in products">
                                         <td ><img ng-src="uploads/{{item.img}}" height="50"/></td>
                                         <td>{{item.name}}</td>
+                                        <td>{{item.description}}</td>
                                         <td>{{item.price}}</td>
                                         <td>{{item.status | ucfirst}}</td>
                                         <td><i class="fa fa-pencil-square-o"></i></td>
