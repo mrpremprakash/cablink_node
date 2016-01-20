@@ -26,7 +26,8 @@ module.exports = {
             category_id: req.body.category_id,
             status: req.body.status,
             price: req.body.price,
-            img: 'products/default.png'
+            description: req.body.description,
+            img: 'products/product-1.jpg'
         }).then(function(row) {
             var result = {
                 status: 1,
